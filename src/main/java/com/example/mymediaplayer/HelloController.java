@@ -79,11 +79,11 @@ public class HelloController {
             });
 
             mediaPlayer.currentTimeProperty().addListener(new ChangeListener<javafx.util.Duration>() {
-                                                              @Override
-                                                              public void changed(ObservableValue<? extends javafx.util.Duration> observable, javafx.util.Duration oldValue, javafx.util.Duration newValue) {
-                                                                  progressBar.setValue(newValue.toSeconds());
-                                                              }
-                                                          }
+                @Override
+                public void changed(ObservableValue<? extends javafx.util.Duration> observable, javafx.util.Duration oldValue, javafx.util.Duration newValue) {
+                    progressBar.setValue(newValue.toSeconds());
+                }
+            }
             );
 
             progressBar.setOnMousePressed(new EventHandler<MouseEvent>() {
@@ -112,7 +112,7 @@ public class HelloController {
         }
     }
 
-    @Override
+    //@Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
